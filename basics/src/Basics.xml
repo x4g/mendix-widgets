@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="mendix.basics.Basics" pluginWidget="true" needsEntityContext="true" offlineCapable="true" supportedPlatform="Web"
+    xmlns="http://www.mendix.com/widget/1.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Basics</name>
+    <description>My widget description</description>
+    <icon/>
+    <properties>
+        <propertyGroup caption="General">
+            <!-- <property key="stringValue" type="attribute" required="true">
+                <caption>String value</caption>
+                <description></description>
+                <attributeTypes>
+                    <attributeType name="String"/>
+                </attributeTypes>
+            </property> -->
+
+            <property key="data" type="datasource" isList="true" required="true">
+                <caption>Data source</caption>
+                <description />
+            </property>
+
+            <property key="attributeList" type="attribute" required="true" dataSource="data">
+                <caption>String from data source</caption>
+                <description></description>
+                <attributeTypes>
+                    <attributeType name="String"/>
+                </attributeTypes>
+            </property>
+
+            <property key="enumList" type="attribute" required="true" dataSource="data">
+                <caption>Enum from data source</caption>
+                <description></description>
+                <attributeTypes>
+                    <attributeType name="Enum"/>
+                </attributeTypes>
+            </property>
+
+            <property key="action" type="action">
+                <caption>On click</caption>
+                <description>Action to be performed when button is clicked</description>
+            </property>
+
+            <!-- <property key="enumValue" type="attribute">
+                <caption>Enum</caption>
+                <description>Enum value</description>
+                <attributeTypes>
+                    <attributeType name="Enum"/>
+                </attributeTypes>
+            </property> -->
+
+            <!-- <property key="myObject" type="object" isList="true">
+                <caption>My object list</caption>
+                <description/>
+                <properties>
+                    <propertyGroup caption="Object list group">
+                        <property key="myObjectBool" type="string" defaultValue="true">
+                            <caption>My String</caption>
+                            <description>My string setting</description>
+                        </property>
+                        <property key="myObjectAction" type="action">
+                            <caption>My action</caption>
+                            <description>My action setting</description>
+                        </property>
+                    </propertyGroup>
+                </properties>
+            </property> -->
+
+        </propertyGroup>
+    </properties>
+</widget>
